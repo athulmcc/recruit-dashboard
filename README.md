@@ -1,12 +1,12 @@
 # Django Student Dashboard
 
-## 📌 Project Overview
+##  Project Overview
 This is a Django-based web application to manage student records.  
 It allows users to add, view, update, and filter students based on course interest and status.
 
 ---
 
-## 🚀 Features
+##  Features
 - Add new student
 - View all students in a dashboard
 - Search and filter by course interest
@@ -15,7 +15,7 @@ It allows users to add, view, update, and filter students based on course intere
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 - Python
 - Django
 - SQLite
@@ -23,15 +23,15 @@ It allows users to add, view, update, and filter students based on course intere
 
 ---
 
-## 🤖 AI Tools Used
-- ChatGPT  and claude ai for:
+##  AI Tools Used
+- ChatGPT for:
   - Generating Django models, views, and templates
   - Debugging template errors
   - Improving UI and structure
 
 ---
 
-## 🔧 Manual Improvements
+##  Manual Improvements
 - Fixed Django template syntax issues
 - Implemented filtering logic in backend
 - Enhanced UI design
@@ -39,14 +39,14 @@ It allows users to add, view, update, and filter students based on course intere
 
 ---
 
-## ⚠️ Challenges Faced
+##  Challenges Faced
 - Understanding Django template blocks (`endif`, `endblock`)
 - Connecting frontend filters with backend logic
 - Debugging form validation and errors
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
 ```bash
 python manage.py runserver
