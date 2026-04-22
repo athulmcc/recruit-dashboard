@@ -24,7 +24,7 @@ It allows users to add, view, update, and filter students based on course intere
 ---
 
 ##  AI Tools Used
-- ChatGPT for:
+- ChatGPT and claude Ai for:
   - Generating Django models, views, and templates
   - Debugging template errors
   - Improving UI and structure
