@@ -1,0 +1,52 @@
+{% extends 'students/base.html' %}
+
+{% block title %}Delete {{ student.name }} · Recruit Dashboard{% endblock %}
+
+{% block page_title %}Confirm Delete{% endblock %}
+{% block page_subtitle %}// this action cannot be undone{% endblock %}
+
+{% block topbar_actions %}
+    <a href="{% url 'student_list' %}" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-left me-1"></i> Back
+    </a>
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-5">
+        <div class="card" style="border-color: rgba(255,107,107,0.4);">
+            <div class="card-header" style="color: var(--accent2); border-color: rgba(255,107,107,0.3);">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>Delete Confirmation
+            </div>
+            <div class="card-body" style="padding: 28px;">
+                <p style="font-size: 15px; margin-bottom: 20px;">
+                    You are about to permanently delete:
+                </p>
+                <div style="background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin-bottom: 24px;">
+                    <div style="font-size: 16px; font-weight: 800; margin-bottom: 4px;">{{ student.name }}</div>
+                    <div style="font-size: 12px; font-family: var(--mono); color: var(--muted);">{{ student.email }}</div>
+                    <div style="margin-top: 10px;">
+                        <span class="course-tag">{{ student.get_course_interest_display }}</span>
+                        <span class="badge-status badge-{{ student.status }} ms-2">{{ student.get_status_display }}</span>
+                    </div>
+                </div>
+                <p style="font-size: 13px; color: var(--muted); font-family: var(--mono); margin-bottom: 24px;">
+                    This action is irreversible. The record will be permanently removed from the database.
+                </p>
+                <div class="d-flex gap-3">
+                    <form method="POST" class="flex-fill">
+                        {% csrf_token %}
+                        <button type="submit" class="btn w-100"
+                                style="background: var(--accent2); border-color: var(--accent2); color: white; font-weight: 700; padding: 10px;">
+                            <i class="bi bi-trash-fill me-2"></i>Yes, Delete
+                        </button>
+                    </form>
+                    <a href="{% url 'student_list' %}" class="btn btn-outline-secondary flex-fill" style="text-align:center; padding: 10px;">
+                        Cancel
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
